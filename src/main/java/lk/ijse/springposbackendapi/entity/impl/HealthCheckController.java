@@ -1,4 +1,4 @@
-package lk.ijse.springposbackendapi.controller;
+package lk.ijse.springposbackendapi.entity.impl;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
