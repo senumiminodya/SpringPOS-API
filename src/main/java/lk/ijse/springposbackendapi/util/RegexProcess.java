@@ -8,4 +8,10 @@ public class RegexProcess {
         Pattern regexPattern = Pattern.compile(regexForCustomerID);
         return regexPattern.matcher(customerId).matches();
     }
+
+    public static boolean itemIdMatcher(String itemId) {
+        String regexForItemID = "^ITEM-[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$";
+        Pattern regexPattern = Pattern.compile(regexForItemID);
+        return regexPattern.matcher(itemId).matches();
+    }
 }

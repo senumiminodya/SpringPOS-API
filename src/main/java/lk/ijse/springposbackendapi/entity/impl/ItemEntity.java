@@ -14,14 +14,10 @@ import java.util.List;
 @Table(name = "item")
 public class ItemEntity {
     @Id
-    private String code;  // Item code
-
+    private String code;
     private String name;
-
-    private Double price;  // Price of the item
-
-    private int qty;  // Quantity available in stock
-
+    private Double price;
+    private int qty;
     @ManyToMany(mappedBy = "items")
     private List<OrderEntity> orders;
 }

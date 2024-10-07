@@ -14,16 +14,12 @@ import java.util.List;
 @Table(name = "customer")
 public class CustomerEntity {
     @Id
-    private String id;  // Unique identifier for customer
-
+    private String id;
     @Column(nullable = false, unique = true)
-    private String nic;  // National ID or similar unique identifier
-
+    private String nic;
     private String name;
-
     @Column(nullable = false, unique = true)
-    private String phoneNo;  // Phone number
-
+    private String phoneNo;
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<OrderEntity> orders;
 }
