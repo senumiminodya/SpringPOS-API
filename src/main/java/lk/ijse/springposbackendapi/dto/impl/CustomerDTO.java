@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class CustomerDTO implements CustomerStatus {
-    private Long id;
+    private String id;
     private String nic;
     private String name;
     private String phoneNo;

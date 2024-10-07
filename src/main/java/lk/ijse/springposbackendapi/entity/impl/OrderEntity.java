@@ -15,8 +15,7 @@ import java.util.List;
 @Table(name = "orders")
 public class OrderEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long orderId;  // Unique identifier for the order
+    private String orderId;  // Unique identifier for the order
 
     private LocalDate orderDate;  // Date of the order
 

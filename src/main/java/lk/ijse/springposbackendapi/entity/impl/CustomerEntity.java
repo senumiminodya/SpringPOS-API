@@ -14,8 +14,7 @@ import java.util.List;
 @Table(name = "customer")
 public class CustomerEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;  // Unique identifier for customer
+    private String id;  // Unique identifier for customer
 
     @Column(nullable = false, unique = true)
     private String nic;  // National ID or similar unique identifier

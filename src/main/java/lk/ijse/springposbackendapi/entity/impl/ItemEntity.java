@@ -14,8 +14,7 @@ import java.util.List;
 @Table(name = "item")
 public class ItemEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long code;  // Item code
+    private String code;  // Item code
 
     private String name;
 

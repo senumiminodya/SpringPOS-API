@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class ItemDTO implements ItemStatus {
-    private Long code;
+    private String code;
     private String name;
     private Double price;
     private int qty;
