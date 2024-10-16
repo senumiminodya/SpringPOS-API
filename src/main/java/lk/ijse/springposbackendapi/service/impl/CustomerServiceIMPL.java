@@ -24,6 +24,7 @@ public class CustomerServiceIMPL implements CustomerService {
     private CustomerDAO customerDAO;
     @Autowired
     private Mapping customerMapping;
+
     @Override
     public void saveCustomer(CustomerDTO customerDTO) {
         customerDTO.setId(AppUtil.generateCustomerId());

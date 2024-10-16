@@ -9,4 +9,8 @@ public class AppUtil {
     public static String generateItemId() {
         return "ITEM-"+ UUID.randomUUID();
     }
+
+    public static String generateOrderId() {
+        return "ORDER-"+ UUID.randomUUID();
+    }
 }

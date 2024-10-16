@@ -1,14 +1,10 @@
 package lk.ijse.springposbackendapi.controller;
 
 import lk.ijse.springposbackendapi.customStatusCode.SelectedCustomerItemAndOrderStatus;
-import lk.ijse.springposbackendapi.dto.CustomerStatus;
 import lk.ijse.springposbackendapi.dto.ItemStatus;
-import lk.ijse.springposbackendapi.dto.impl.CustomerDTO;
 import lk.ijse.springposbackendapi.dto.impl.ItemDTO;
-import lk.ijse.springposbackendapi.exception.CustomerNotFoundException;
 import lk.ijse.springposbackendapi.exception.DataPersistException;
 import lk.ijse.springposbackendapi.exception.ItemNotFoundException;
-import lk.ijse.springposbackendapi.service.CustomerService;
 import lk.ijse.springposbackendapi.service.ItemService;
 import lk.ijse.springposbackendapi.util.RegexProcess;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:63342")
 @RestController
 @RequestMapping("api/v1/items")
 public class ItemController {

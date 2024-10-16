@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -15,21 +14,18 @@ import java.util.List;
 @Table(name = "orders")
 public class OrderEntity {
     @Id
-    private String orderId;  // Unique identifier for the order
-
-    private LocalDate orderDate;  // Date of the order
-
-    private Double total;  // Total amount for the order
-
-    @ManyToOne(fetch = FetchType.LAZY)
+    private String orderId;
+    private LocalDate orderDate;
+    private Double total;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "customer_id", nullable = false)
-    private CustomerEntity customer;  // Reference to the customer who placed the order
+    private CustomerEntity customer;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "order_item",
             joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "item_code")
     )
-    private List<ItemEntity> items;  // List of items in the order
+    private List<ItemEntity> items;
 }
